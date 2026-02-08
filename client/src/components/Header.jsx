@@ -3,6 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import Search from './Search';
 import { useWishList } from '../context/WishListContext';
 import { useCart } from '../context/CartContext';
+import About from './About';
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ const Header = () => {
                 >
                     ShoeVista
                 </Link>
-
+              <Link to="/about-us" className='hidden md:block hover:border-b-2 border-black' onClick={toggleMenu}>About us</Link>
                 {/* Toggle Button for Mobile */}
                 <button
                     onClick={toggleMenu}
